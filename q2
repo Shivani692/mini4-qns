@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  #container {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+h1 {
+  color: blue;
+}
+  </style>
+</head>
+<body>
+    <button id="helloButton">Hello</button>
+    <div id="container"></div>
+
+  <script>
+   
+const button = document.getElementById('helloButton');
+const container = document.getElementById('container');
+
+button.addEventListener('click', () => {
+ const h1 = document.createElement('h1');
+  h1.textContent = 'Hello, world!';
+ container.appendChild(h1);
+});
+  </script>
+</body>
+</html>
