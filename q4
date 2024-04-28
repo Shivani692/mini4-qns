@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change H1 Text on Button Click</title>
+   <style>body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+}
+
+#change-text-button {
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}</style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="h1-text">Click a button to change this text:</h1>
+        <button class="change-text-button" data-button-text="John">John</button>
+        <button class="change-text-button" data-button-text="Hari">Hari</button>
+        <button class="change-text-button" data-button-text="Praveen">Praveen</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >$(document).ready(function () {
+        $(".change-text-button").click(function () {
+            const buttonText = $(this).data("button-text");
+            $("#h1-text").text(buttonText);
+        });
+    });</script>
+</body>
+</html>
